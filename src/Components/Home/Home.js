@@ -3,6 +3,7 @@ import HomeHeader from "./HomeHeader/HomeHeader";
 import ThreeColumns from "./ThreeColumns/ThreeColumns";
 import SimpleSteps from "./SimpleSteps/SimpleSteps";
 import AboutAs from "./AboutAs/AboutAs";
+import Contact from "./Contact/Contact";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <ThreeColumns/>
             <SimpleSteps/>
             <AboutAs/>
+            <Contact/>
         </>
     )
 }

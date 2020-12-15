@@ -1,0 +1,77 @@
+.contact-contaier{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../../Assets/Background-Contact-Form.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-contact-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title{ 
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.first-line-form{
+    display: flex;
+}
+
+label{
+    font-weight: 700;
+    color: #3C3C3C;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.name-input-div, .email-input-div, .textarea-input-div{
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: red;
+}
+
+.contact-form{
+    border: none;
+    background: none;
+    border-bottom: 2px solid  #737373 ;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.contact-form-text{
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    border-bottom: 2px solid  #737373 ;
+    height: 110px;
+}
+
+.submit-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.submit-btn{
+    background: none;
+    border: 2px solid #737373;
+    font-size: 1.6rem;
+    padding: 7px 23px;
+    cursor: pointer;
+}
