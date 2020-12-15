@@ -1,0 +1,33 @@
+.tree-columns-container{
+    height: 384px;
+    display: flex;
+    justify-content: space-around;
+    background-color:#FAD648 ;
+    padding: 20px;
+}
+
+.column{
+    text-align: center;
+    padding: 0 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column-number{
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #737373;
+}
+
+.column-title{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #737373;
+}
+
+.column-description{
+    font-size: 0.9rem;
+    line-height:20px;
+    color: #737373;
+}
