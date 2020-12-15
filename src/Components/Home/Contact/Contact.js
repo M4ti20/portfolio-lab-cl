@@ -29,18 +29,18 @@ const Contact = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="first-line-form">    
                         <div className="name-input-div">
-                            <label>Wpisz swoje imię</label>
+                            <label className="contact-label">Wpisz swoje imię</label>
                             <input type="text" className="contact-form" placeholder="Name" name="name" ref={register({required: true, minLength: 4})}/>
                             {errors.name && <p className="error-message">Podane imię jest nieprawidłowe!</p>}
                         </div>
                         <div className="email-input-div">
-                            <label>Wpisz swój email</label>
+                            <label className="contact-label">Wpisz swój email</label>
                             <input type="email" className="contact-form" placeholder="abc@xyz.pl" name="email" ref={register({ pattern: /\S+@\S+\.\S+/ })} />
                             {errors.email && <p className="error-message">Podany email jest nieprawidłowy!</p>}
                         </div>
                     </div>
                         <div className="textarea-input-div">
-                            <label>Wpisz swoją wiadomość</label>
+                            <label className="contact-label">Wpisz swoją wiadomość</label>
                             <textarea type="text" className="contact-form-text" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" name="textarea" ref={register({required: true, minLength: 120})}/>
                             {errors.textarea && <p className="error-message">wiadomość jest za krótka</p>}
                         </div>

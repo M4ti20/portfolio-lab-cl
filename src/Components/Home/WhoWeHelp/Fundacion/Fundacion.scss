@@ -1,0 +1,38 @@
+.fundacion-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.fundacion-text{
+    width: 640px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-div{
+    height: 81px;
+    width: 1344px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+
+.name-of-company{
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.purpose-and-mission{
+    font-size: 1.1rem;
+}
+
+.equipment{
+    font-size: 1.1rem;
+}
