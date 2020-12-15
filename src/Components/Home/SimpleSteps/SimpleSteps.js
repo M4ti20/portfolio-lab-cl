@@ -1,5 +1,6 @@
 import React from "react";
 import "./SimpleSteps.scss";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 
 import decoration from "../../../Assets/Decoration.svg";
 import icon1 from "../../../Assets/Icon-1.svg";
@@ -44,7 +45,7 @@ const SimpleSteps = () => {
                 </div>
             </div>
             <div className="simple-steps-button">
-                <button className="simple-steps-main-btn">Oddaj <br/> rzeczy</button>
+                <Link to="/login"><button className="simple-steps-main-btn">Oddaj <br/> rzeczy</button></Link>
             </div>
         </section>
     )
