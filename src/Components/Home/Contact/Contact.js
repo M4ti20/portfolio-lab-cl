@@ -3,6 +3,8 @@ import "./Contact.scss";
 import { useForm } from "react-hook-form";
 
 
+import Facebook from "../../../Assets/Facebook.svg"
+import Instagram from "../../../Assets/Instagram.svg"
 import decoration from "../../../Assets/Decoration.svg";
 
 const Contact = () => {
@@ -48,6 +50,13 @@ const Contact = () => {
                             <button type="submit" className="submit-btn">Wyślij</button>
                     </div>
                 </form>
+            </div>
+            <div className="footer">
+                <p className="footer-p">Copyright by Coders Lab</p>
+                <div className="footer-icon">
+                    <img src={Facebook} alt="Facebook"/>
+                    <img src={Instagram} alt="instagram"/>
+                </div>
             </div>
         </section>
     )

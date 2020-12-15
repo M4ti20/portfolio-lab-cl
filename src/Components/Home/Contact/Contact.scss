@@ -1,20 +1,30 @@
 .contact-contaier{
     width: 100%;
     height: 100vh;
-    background-image: url(../../../Assets/Background-Contact-Form.jpg);
-    background-position: center;
+    background: url(../../../Assets/Background-Contact-Form.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
 }
+
+.contact-contaier:after{
+    content: "";
+    background-color: red;
+
+
+}
+
+
 
 .right-contact-div{
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 11%;
 }
 
 .contact-title{ 
@@ -74,4 +84,27 @@
     font-size: 1.6rem;
     padding: 7px 23px;
     cursor: pointer;
+}
+
+
+
+//-------FOOTER------------
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-p{
+    margin-left: 42%;
+    margin-top: 10px;
+}
+
+.footer-icon{
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
