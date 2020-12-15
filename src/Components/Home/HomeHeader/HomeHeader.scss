@@ -55,10 +55,11 @@
 .nav-element{
     text-align: center;
     padding: 10px 20px;
+    padding-top: 15px;
+
 
     &:first-child{
         border: 1px solid black;
-        padding: 10px 20px;
         cursor: pointer;
         
     }
