@@ -3,6 +3,7 @@ import React from "react";
 import "./Login.scss";
 import HomeNav from "../Home/HomeNav/HomeNav";
 import Decoration from "../../Assets/Decoration.svg";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 
 const Login = () => {
     return(
@@ -24,8 +25,8 @@ const Login = () => {
                     </div>
                 </div>
                 <div className="login-buttons">
-                        <button className="login-btn">Załóż konto</button>
-                        <button className="login-btn">Zaloguj się</button>
+                    <Link to="/register"><button className="login-btn">Załóż konto</button></Link> 
+                    <button className="login-btn-bord">Zaloguj się</button>
                 </div>
             </div>
         </section>

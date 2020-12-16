@@ -1,9 +1,9 @@
-.login-container{
+.register-container{
     width: 100%;
     height: 100vh;
 }
 
-.login-content{  
+.register-content{  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,32 +11,32 @@
     height: 80vh;
 }
 
-.login-title{
+.register-title{
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.login-panel{
+.register-panel{
     background-color: #F0F1F1;
     width: 384px;
-    height: 235px;
+    height: 328px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
 }
-.login-input-div{
+.register-input-div{
     display: flex;
     flex-direction: column;
 }
 
-.login-label{
+.register-label{
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.login-input{
+.register-input{
     background: none;
     border: none;
     border-bottom: 1px solid #707070;
@@ -45,14 +45,14 @@
     font-size: 1rem;
 }
 
-.login-buttons{
+.register-buttons{
     width: 500px;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.login-btn{
+.register-btn{
     background: none;
     border: none;
     font-size: 1.125;
@@ -60,7 +60,7 @@
     padding: 15px 20px;
 }
 
-.login-btn-bord{
+.register-btn-bord{
     background: none;
     border: none;
     font-size: 1.125;
