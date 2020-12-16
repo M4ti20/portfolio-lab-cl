@@ -1,0 +1,22 @@
+.log-out-content{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-title{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.to-main-page{
+    margin-top: 40px;
+    border: 1px solid black;
+    background: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    font-size: 1.125;
+}
