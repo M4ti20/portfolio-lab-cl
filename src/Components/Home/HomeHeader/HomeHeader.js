@@ -14,7 +14,7 @@ const HomeHeader = () => {
                 <img src={homeJpg} alt="" className="main-image"/>
             </div>
             <div className="header-right-content">
-                <div className="login-bar">
+                {/* <div className="login-bar">
                     <Link to="/login"><button className="log-in-btn">Zaloguj</button></Link>
                     <Link to="/register"><button className="register-on-btn">Załóż konto</button></Link>   
                 </div>
@@ -26,7 +26,7 @@ const HomeHeader = () => {
                         <Link to="wwh" smooth={true} duration={1000}><li className="nav-element">Fundacja i organizacje</li></Link>
                         <Link to="contact" smooth={true} duration={1000}><li className="nav-element">Kontakt</li></Link>
                     </ul>
-                </nav>
+                </nav> */}
                 <div className="header-main-content">
                     <div className="header-main-text">
                         <p className="header-main-text-p">Zacznij pomagać!</p>
