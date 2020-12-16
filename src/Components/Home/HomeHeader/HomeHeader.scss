@@ -56,13 +56,17 @@
     text-align: center;
     padding: 10px 20px;
     padding-top: 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
 
-
-    &:first-child{
-        border: 1px solid black;
-        cursor: pointer;
-        
+    &:hover{
+        border-bottom: 2px solid black;
     }
+}
+
+.nav-start{
+    border: 2px solid black;
 }
 
 .header-main-content{

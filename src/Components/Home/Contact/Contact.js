@@ -24,7 +24,7 @@ const Contact = () => {
     }
 
     return(
-        <section className="contact-contaier">
+        <section className="contact-contaier" id="contact">
             <div className="right-contact-div">
                 <h2 className="contact-title">Skontaktuj się z nami</h2>
                 <img src={decoration} alt="decoration" className="contact-decoration"/>

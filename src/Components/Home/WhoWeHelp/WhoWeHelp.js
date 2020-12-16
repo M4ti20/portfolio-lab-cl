@@ -9,7 +9,7 @@ import Organization from "./Organization/Organization";
 const WhoWeHelp = () => {
     return(
         <>
-        <section className="wwh-container">
+        <section className="wwh-container" id="wwh">
             <h2 className="wwh-main-title">Komu pomagamy?</h2>
             <img src={decoration} alt=""/>
             <div className="wwh-main-buttons">

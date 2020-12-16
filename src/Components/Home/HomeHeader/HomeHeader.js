@@ -3,8 +3,8 @@ import "./HomeHeader.scss";
 import homeJpg from "../../../Assets/Home-Hero-Image.jpg";
 import decoration from "../../../Assets/Decoration.svg";
 
-import {BrowserRouter as Router, Link} from "react-router-dom";
-
+// import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-scroll"
 
 
 const HomeHeader = () => {
@@ -20,11 +20,11 @@ const HomeHeader = () => {
                 </div>
                 <nav className="nav-bar">
                     <ul className="header-nav">
-                        <li className="nav-element">Start</li>
-                        <li className="nav-element">O co chodzi?</li>
-                        <li className="nav-element">O nas</li>
-                        <li className="nav-element">Fundacja i organizacje</li>
-                        <li className="nav-element">Kontakt</li>
+                        <li className="nav-element nav-start">Start</li>
+                        <Link to="simple-steps" smooth={true} duration={1000}><li className="nav-element">O co chodzi?</li></Link>
+                        <Link to="about-us" smooth={true} duration={1000}><li className="nav-element">O nas</li></Link>
+                        <Link to="wwh" smooth={true} duration={1000}><li className="nav-element">Fundacja i organizacje</li></Link>
+                        <Link to="contact" smooth={true} duration={1000}><li className="nav-element">Kontakt</li></Link>
                     </ul>
                 </nav>
                 <div className="header-main-content">

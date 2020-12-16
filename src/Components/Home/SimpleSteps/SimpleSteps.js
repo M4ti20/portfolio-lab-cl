@@ -10,7 +10,7 @@ import icon4 from "../../../Assets/Icon-4.svg";
 
 const SimpleSteps = () => {
     return(
-        <section className="simple-steps-container">
+        <section className="simple-steps-container" id="simple-steps">
             <div className="simple-steps-title">
                 <h2 className="simple-steps-main-text">Wystarczą 4 prost kroki</h2>
                 <img src={decoration} alt="" />
