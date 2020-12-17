@@ -1,6 +1,6 @@
 import React from "react";
 import "./WhoWeHelp.scss";
-import {BrowserRouter as Router, Switch, Link, Route} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 
 import decoration from "../../../Assets/Decoration.svg";
 import Fundacion from "./Fundacion/Fundacion";
@@ -13,15 +13,15 @@ const WhoWeHelp = () => {
             <h2 className="wwh-main-title">Komu pomagamy?</h2>
             <img src={decoration} alt=""/>
             <div className="wwh-main-buttons">
-                <button className="wwh-btn">Fundacjom</button>
-                <button className="wwh-btn">Organizacjom <br/> pozarządowym</button>
-                <button className="wwh-btn">Lokalnym <br/> zbiórkom</button>
+                <Link to="/"><button className="wwh-btn">Fundacjom</button></Link>
+                <Link to="/organization"><button className="wwh-btn">Organizacjom <br/> pozarządowym</button></Link>
+                <Link to=""><button className="wwh-btn">Lokalnym <br/> zbiórkom</button></Link>
             </div>
             <div className="change-wwh-content">
-                <Router>
-                    {/* <Fundacion/> */}
-                    <Organization/>
-                </Router>
+                    <Router>
+                        <Route exact path="/" component={Fundacion} />
+                        <Route exact path="/organization" component={Organization} />
+                    </Router>
             </div>
         </section>
         

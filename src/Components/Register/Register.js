@@ -3,7 +3,7 @@ import React from "react";
 import "./Register.scss";
 import HomeNav from "../Home/HomeNav/HomeNav";
 import Decoration from "../../Assets/Decoration.svg";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Register = () => {
     return(
@@ -12,7 +12,7 @@ const Register = () => {
                 <HomeNav/>
             </div>
             <div className="register-content">
-                <h2 className="register-title">Zaloguj się</h2>
+                <h2 className="register-title">Zarejestruj się</h2>
                 <img src={Decoration} alt="decoration" />
                 <div className="register-panel">
                     <div className="register-input-div">

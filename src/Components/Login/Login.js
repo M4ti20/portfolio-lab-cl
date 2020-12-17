@@ -3,7 +3,7 @@ import React from "react";
 import "./Login.scss";
 import HomeNav from "../Home/HomeNav/HomeNav";
 import Decoration from "../../Assets/Decoration.svg";
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const Login = () => {
     return(
