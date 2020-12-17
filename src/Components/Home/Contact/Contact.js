@@ -14,14 +14,24 @@ const Contact = () => {
     const onSubmit = (data) =>{
         console.log(data)
 
-        fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+        const API = "https://fer-api.coderslab.pl/v1/portfolio/contact";
+
+        fetch(`${API}`, {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
-                "Content-Type": "application/json"
+              "Content-Type": "application/json"
             }
-        });
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data);
+            })
+            .catch(error => {
+              console.log(error);
+            });
     }
+
 
     return(
         <section className="contact-contaier" id="contact">
@@ -43,7 +53,7 @@ const Contact = () => {
                     </div>
                         <div className="textarea-input-div">
                             <label className="contact-label">Wpisz swoją wiadomość</label>
-                            <textarea type="text" className="contact-form-text" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" name="textarea" ref={register({required: true, minLength: 120})}/>
+                            <textarea type="text" className="contact-form-text" placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled" name="message" ref={register({required: true, minLength: 120})}/>
                             {errors.textarea && <p className="error-message">wiadomość jest za krótka</p>}
                         </div>
                         <div className="submit-button">    

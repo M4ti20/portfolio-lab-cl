@@ -3,7 +3,6 @@ import "./HomeHeader.scss";
 import homeJpg from "../../../Assets/Home-Hero-Image.jpg";
 import decoration from "../../../Assets/Decoration.svg";
 
-// import {BrowserRouter as Router, Link} from "react-router-dom";
 import {Link} from "react-scroll"
 
 
@@ -34,8 +33,8 @@ const HomeHeader = () => {
                         <img src={decoration} alt="" />
                     </div>
                     <div className="header-main-button">
-                        <Link to="/login"><button className="first-main-btn">Oddaj <br/> rzeczy</button></Link>
-                       <Link to="/login"><button className="second-main-btn">Zorganizuj <br/> zbiórkę</button></Link>
+                        <a href="/login"><button className="first-main-btn">Oddaj <br/> rzeczy</button></a>
+                       <a href="/login"><button className="second-main-btn">Zorganizuj <br/> zbiórkę</button></a>
                     </div>
                 </div>
             </div>

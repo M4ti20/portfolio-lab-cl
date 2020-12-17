@@ -34,6 +34,10 @@ const Organization = () => {
                     <p className="equipment">Lorem Ipsum is not simply random text.</p>
                 </div>
             </div>
+            <div className="page-buttons">
+                <button className="next-page-wwh">1</button>
+                <button className="next-page-wwh">2</button>
+            </div>
         </section>
     )
 };
