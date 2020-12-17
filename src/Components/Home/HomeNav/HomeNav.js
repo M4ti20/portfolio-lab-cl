@@ -8,12 +8,12 @@ const HomeNav = () => {
     return(
         <section className="home-nav-container">
             <div className="login-bar">
-                <Link to="/login"><button className="log-in-btn">Zaloguj</button></Link>
-                <Link to="/register"><button className="register-on-btn">Załóż konto</button></Link> 
+                <a href="/login"><button className="log-in-btn">Zaloguj</button></a>
+                <a href="/register"><button className="register-on-btn">Załóż konto</button></a> 
             </div>
             <nav className="nav-bar">
                 <ul className="header-nav">
-                    <li className="nav-element nav-start">Start</li>
+                    <a href="/"><li className="nav-element nav-start">Start</li></a>
                     <Link to="simple-steps" smooth={true} duration={1000}><li className="nav-element">O co chodzi?</li></Link>
                     <Link to="about-us" smooth={true} duration={1000}><li className="nav-element">O nas</li></Link>
                     <Link to="wwh" smooth={true} duration={1000}><li className="nav-element">Fundacja i organizacje</li></Link>
