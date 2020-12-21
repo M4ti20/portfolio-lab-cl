@@ -4,6 +4,13 @@
     justify-content: space-around;
     background-color:#FAD648 ;
     padding: 20px;
+
+    @media (max-width: 957px){
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .column{

@@ -1,7 +1,6 @@
 import React from "react";
 import "./HomeNav.scss";
 
-// import {BrowserRouter as Router, Link} from "react-router-dom";
 import {Link} from "react-scroll"
 
 const HomeNav = () => {

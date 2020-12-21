@@ -2,6 +2,11 @@
     width: 100%;
     height: auto;
     display: flex;  
+
+    @media (max-width: 953px){
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .about-us-text{
@@ -12,9 +17,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 100px 0 100px;
+    padding: 30px;
     padding-top: 9%;
-    background-color: #dfdfdf
+    background-color: #dfdfdf;
+
+    @media (max-width: 953px){
+        width: 100%;
+        text-align: center;
+    }
+    
 }
 
 .about-us-title{
