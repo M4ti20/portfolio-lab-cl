@@ -1,14 +1,13 @@
-import firebase from "firebase";
-  
-var firebaseConfig = {
-  apiKey: "AIzaSyBlqe_NH75qyoCr5Jjr7uJ6WyZSNtTfxKU",
-  authDomain: "login-22821.firebaseapp.com",
-  databaseURL: "https://login-22821.firebaseio.com",
-  projectId: "login-22821",
-  storageBucket: "login-22821.appspot.com",
-  messagingSenderId: "726784084047",
-  appId: "1:726784084047:web:7cbb7958b101c6da0ac23a"
-};
+import firebase from 'firebase';
 
-const fire = firebase.initializeApp(firebaseConfig);
-export default fire;
+ const config = {
+    apiKey: "AIzaSyBYIuAvKCWdsxu8VXDDa7EcJwMjgGVdMxs",
+    authDomain: "oddaj-rzeczy-f3418.firebaseapp.com",
+    projectId: "oddaj-rzeczy-f3418",
+    storageBucket: "oddaj-rzeczy-f3418.appspot.com",
+    messagingSenderId: "734657018513",
+    appId: "1:734657018513:web:eac5dcc4d3f1246a68dd30"
+  };
+
+ const fire = firebase.initializeApp(config);
+ export default fire;

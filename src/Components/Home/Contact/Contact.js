@@ -40,7 +40,6 @@ const Contact = () => {
             .then(data => {
                 if(data.status === 'error'){
                     setFormErrors(data.errors)
-                    setSuccess(true);
                 }else{
                     setSuccess(true);
                 }
