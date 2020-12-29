@@ -1,37 +1,14 @@
-import React, { Component } from "react";
-import fire from "../Fire/Fire";
+import React from "react";
 
 import "./Register.scss";
 import HomeNav from "../Home/HomeNav/HomeNav";
 import Decoration from "../../Assets/Decoration.svg";
 import {Link} from "react-router-dom";
 
-class Register extends Component {
+const Register = (props) => {
 
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.signup = this.signup.bind(this);
-        this.state = {
-          email: '',
-          password: ''
-        };
-      }
+    const {email, setEmail, password, setPassword, handleSignUp, emailError,  passwordError} = props;
 
-      handleChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
-      }
-    
-      signup(e){
-        e.preventDefault();
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-        }).then((u)=>{console.log(u)})
-        .catch((error) => {
-            console.log(error);
-          })
-      }
-
-    render(){
     return(
         <section className="register-container">
             <div className="main-nav">
@@ -43,36 +20,34 @@ class Register extends Component {
                 <div className="register-panel">
                     <div className="register-input-div">
                         <label className="register-label">Email</label>
-                        <input value={this.state.email} 
-                            onChange={this.handleChange} 
-                            type="email" 
-                            name="email" 
+                        <input 
+                            type="text" 
+                            required value={email} 
+                            onChange={e => setEmail(e.target.value)}                            
                             className="register-input" 
-                            id="exampleInputEmail1" 
-                            aria-describedby="emailHelp" 
                             placeholder="Enter email" 
                         />
+                        <p>{emailError}</p>
                     </div>
                     <div className="register-input-div">
                         <label className="register-label">Hasło</label>
-                        <input value={this.state.password} 
-                            onChange={this.handleChange} 
+                        <input 
                             type="password" 
-                            name="password" 
+                            required value={password} 
+                            onChange={(e) => setPassword(e.target.value)}  
                             className="register-input" 
-                            id="exampleInputPassword1" 
                             placeholder="Password"
                         />
+                        <p>{passwordError}</p>
                     </div>
                 </div>
                 <div className="register-buttons">
                     <Link to="/login"><button className="register-btn">Zaloguj się</button></Link>
-                    <button onClick={this.signup} className="register-btn-bord">Załóż konto</button>
+                    <button onClick={handleSignUp} className="register-btn-bord">Załóż konto</button>
                 </div>
             </div>
         </section>
     )
-    }
 };
 
 export default Register;

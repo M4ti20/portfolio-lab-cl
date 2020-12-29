@@ -1,14 +1,29 @@
 import React from "react";
 import "./HomeNav.scss";
+import fire from "../../Fire/Fire";
 
 import {Link} from "react-scroll"
+const HomeNav = ({user, email}) => {
 
-const HomeNav = () => {
+    const handleLogout =() => {
+        fire.auth().signOut();
+        }
+
     return(
         <section className="home-nav-container">
             <div className="login-bar">
-                <a href="/login"><button className="log-in-btn">Zaloguj</button></a>
-                <a href="/register"><button className="register-on-btn">Załóż konto</button></a> 
+                {user ?(
+                    <div className="logged-menu">
+                        <p>Cześć {email} !</p> 
+                        <a href="/oddaj-rzeczy"><button className="logged-home-nav-form-btn">Oddaj rzeczy</button></a>
+                        <a href="/logout"><button className="logg-out-btn" onClick={handleLogout}>Wyloguj</button></a>
+                    </div>
+                ):(
+                    <>
+                        <a href="/login"><button className="log-in-btn">Zaloguj</button></a>
+                        <a href="/register"><button className="register-on-btn">Załóż konto</button></a> 
+                    </>
+                )}
             </div>
             <nav className="nav-bar">
                 <ul className="header-nav">

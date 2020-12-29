@@ -22,7 +22,7 @@ const Contact = () => {
        
         const data = {
             name: senderName,
-            emaile: senderEmail,
+            email: senderEmail,
             message: senderMessage
         };
       

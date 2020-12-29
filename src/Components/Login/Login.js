@@ -1,48 +1,14 @@
-import React, { Component } from "react";
-import fire from "../Fire/Fire";
+import React from "react";
 
 import "./Login.scss";
 import HomeNav from "../Home/HomeNav/HomeNav";
 import Decoration from "../../Assets/Decoration.svg";
 import {Link} from "react-router-dom";
 
-class Login extends Component {
-    constructor(props) {
-        super(props);
-        this.login = this.login.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            email: '',
-            password: '',
-            emailError: '',
-            passwordError: ''
-        };
-      }
+const Login = (props) => { 
 
-      handleChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
-      }
-    
-      login(e) {
-        e.preventDefault();
-        fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-        }).catch((error) => {
-            console.log(error);
-            switch(error){
-                case "auth/invalid-email":
-                case "auth/user-disable":
-                case "autch/user-not-found":
-                    this.state.emailError(error)
-                    break;
-                case "auth/wrong-password":
-                    this.state.passwordError(error)
-                    break;
-            }
-          });
-      }
+    const {email, setEmail, password, setPassword, handleLogin, emailError,  passwordError } = props;
 
-
-    render() {
     return(
         <section className="login-container">
             <div className="main-nav">
@@ -54,38 +20,34 @@ class Login extends Component {
                 <div className="login-panel">
                     <div className="login-input-div">
                         <label className="login-label">Email</label>
-                        <input value={this.state.email} 
-                            onChange={this.handleChange} 
-                            type="email" 
-                            name="email" 
+                        <input 
+                            type="text" 
+                            required value={email} 
+                            onChange={e => setEmail(e.target.value)} 
                             className="login-input" 
-                            id="exampleInputEmail1" 
-                            aria-describedby="emailHelp" 
                             placeholder="Enter email" 
                         />
-                        <p>{this.state.emailError}</p>
+                        <p>{emailError}</p>
                     </div>
                     <div className="login-input-div">
                         <label className="login-label">Hasło</label>
-                        <input value={this.state.password} 
-                            onChange={this.handleChange} 
+                        <input 
                             type="password" 
-                            name="password" 
+                            required value={password} 
+                            onChange={(e) => setPassword(e.target.value)} 
                             className="login-input" 
-                            id="exampleInputPassword1" 
                             placeholder="Password"
                         />
-                        <p>{this.state.passwordError}</p>
+                        <p>{passwordError}</p>
                     </div>
                     </div>
                     <div className="login-buttons">
                         <Link to="/register"><button className="login-btn">Załóż konto</button></Link> 
-                        <button className="login-btn-bord" type="submit" onClick={this.login}>Zaloguj się</button>
+                        <button className="login-btn-bord" type="submit" onClick={handleLogin}>Zaloguj się</button>
                     </div>
                 </div>
             </section>
         )
-    }
 }
 
 export default Login;
