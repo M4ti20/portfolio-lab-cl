@@ -9,11 +9,11 @@ import Contact from "./Contact/Contact";
 import WhoWeHelp from "./WhoWeHelp/WhoWeHelp";
 
 
-const Home = ({user, email}) => {
+const Home = ({user}) => {
 
     return(
         <>
-            <HomeHeader user={user} email={email}/>
+            <HomeHeader user={user}/>
             <ThreeColumns/>
             <SimpleSteps/>
             <AboutAs/>

@@ -1,0 +1,28 @@
+.form-baner-img{
+    height: 100vh;
+}
+
+.thing-form-container{
+    display: flex;
+}
+
+.form-baner-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-baner-content-title{
+    text-align: center;
+    font-size: 1.45rem;
+    line-height: 2rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.forom-baner-text{
+    font-size: 1.5rem;
+    margin-top: 30px;
+}

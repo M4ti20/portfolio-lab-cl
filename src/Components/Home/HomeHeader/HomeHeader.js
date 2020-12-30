@@ -4,14 +4,14 @@ import homeJpg from "../../../Assets/Home-Hero-Image.jpg";
 import decoration from "../../../Assets/Decoration.svg";
 import HomeNav from "../HomeNav/HomeNav";
 
-const HomeHeader = ({user, email}) => {
+const HomeHeader = ({user}) => {
     return(
         <section className="home-header-container">
             <div className="header-left-img">
                 <img src={homeJpg} alt="" className="main-image"/>
             </div>
             <div className="header-right-content">
-                <HomeNav user={user} email={email}/>
+                <HomeNav user={user} />
                 <div className="header-main-content">
                     <div className="header-main-text">
                         <p className="header-main-text-p">Zacznij pomagać!</p>
@@ -30,8 +30,6 @@ const HomeHeader = ({user, email}) => {
                                 <a href="/login"><button className="second-main-btn">Zorganizuj <br/> zbiórkę</button></a>
                             </>
                         )}
-                        {/* <a href="/login"><button className="first-main-btn">Oddaj <br/> rzeczy</button></a>
-                       <a href="/login"><button className="second-main-btn">Zorganizuj <br/> zbiórkę</button></a> */}
                     </div>
                 </div>
             </div>

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { browserHistory } from 'react-router';
 import fire from "./Components/Fire/Fire"
 
 import Home from "./Components/Home/Home"
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Logout from "./Components/LogOut/LogOut";
+import ThingsForm from "./Components/Oddaj-rzeczy-form/Things-form";
 
+
+export const EmailContext = React.createContext(null);
 
 function App() {
 
@@ -15,6 +19,7 @@ function App() {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  
 
   const handleLogin = () => {
     fire
@@ -66,16 +71,52 @@ function App() {
     authListener();
   }, [])
 
+  useEffect(()=>{
+    if(user){
+      browserHistory.push("/");
+    }
+  }, [user]);
+
+
+
     return (
       <>
-        {user ? (
-          <Router>
-            <Switch>
-              <Home user={user} email={email}/>
-            </Switch>
-          </Router>
-        ) : (
+        {/* {user ? ( */}
+          <EmailContext.Provider value={email}>
+            <Router>
+              <Switch>
+                <Route exact path="/"><Home user={user}/></Route>
+                <Route path="/oddaj-rzeczy" component={ThingsForm}/>
+                <Route path="/login">
+                  <Login
+                    email={email} 
+                    setEmail={setEmail} 
+                    password={password} 
+                    setPassword={setPassword} 
+                    handleLogin={handleLogin}
+                    emailError={emailError}
+                    passwordError={passwordError}
+                  />
+                </Route> 
+                <Route path="/register">
+                  <Register
+                    email={email} 
+                    setEmail={setEmail} 
+                    password={password} 
+                    setPassword={setPassword} 
+                    handleSignUp={handleSignUp}
+                    emailError={emailError}
+                    passwordError={passwordError}
+                  />
+                </Route>
+                <Route path="/logout" component={Logout} />
 
+              </Switch>
+            </Router>
+          </EmailContext.Provider>
+       
+        {/* ) : ( */}
+{/* 
           <Router>
             <Switch>
               <Route exact path="/"> <Home /> </Route>
@@ -104,7 +145,7 @@ function App() {
               <Route path="/logout" component={Logout} />
             </Switch>
           </Router> 
-        )}
+        )} */}
       </>
     );
 }
