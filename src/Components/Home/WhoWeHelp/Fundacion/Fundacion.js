@@ -36,11 +36,6 @@ const Fundacion = () => {
                     <p className="equipment">ubrania, jedzenie, ciepłe koce</p>
                 </div>
             </div>
-            <div className="page-buttons">
-                <button className="next-page-wwh">1</button>
-                <button className="next-page-wwh">2</button>
-                <button className="next-page-wwh">3</button>
-            </div>
         </section>
     )
 };
